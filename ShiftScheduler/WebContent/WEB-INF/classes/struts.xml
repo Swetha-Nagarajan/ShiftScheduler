@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<constant name="struts.devMode" value="true" />
+   <package name="common" extends="struts-default">
+     
+      <action name="login" 
+            class="com.vdsi.shiftscheduler.controller.CommonController" 
+            method="doLogin">
+            <result name="managerhome">/jsp/managerhome.jsp</result>
+            <result name="memberhome">/jsp/memberhome.jsp</result>
+            <result name="error">/jsp/error.jsp</result>
+      </action>
+      
+      <action name="saveShiftSchedule" 
+            class="com.vdsi.shiftscheduler.controller.CommonController" 
+            method="saveShiftSchedule">
+            <result name="success">/jsp/success.jsp</result>
+            
+      </action>
+      
+   </package>
+</struts>
